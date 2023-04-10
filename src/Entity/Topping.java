@@ -1,6 +1,6 @@
 package Entity;
 
-public class Topping {
+public abstract class Topping {
     protected String name;
     protected Double price ;
 
@@ -10,5 +10,6 @@ public class Topping {
     public String getName(){
         return name;
     }
+
 
 }

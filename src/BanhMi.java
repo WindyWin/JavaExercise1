@@ -1,5 +1,4 @@
-import Entity.BanhMiKhong;
-import Entity.Topping;
+import Entity.*;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -41,8 +40,37 @@ public class BanhMi implements  DoAnNhanh{
     }
     public static BanhMi write(){
         BanhMi banhMi = new BanhMi();
-        Scanner sc = new Scanner();
+        Scanner sc = new Scanner(System.in);
+        int option = 0;
+        while (option!=15){
 
+            System.out.println("Trạng thái bánh mì hiện tại: " + banhMi);
+            System.out.println("Vui lòng chọn topping cho bánh mì");
+
+
+            Class<?>[] toppingChild = Topping.class.getDeclaredClasses();
+
+            for (Class<?> topping:toppingChild){
+                System.out.println(topping.toString());
+            }
+/*            System.out.println("\n1. " + BoKho.toString());
+            System.out.println("\n2. " + CaHoi.toString());
+            System.out.println("\n3. " + ChaBo.toString());
+            System.out.println("\n4. " + ChaBong.toString());
+            System.out.println("\n5. " + ChaCa.toString());
+            System.out.println("\n6. " + ChaLua.toString());
+            System.out.println("\n7. " + HeoQuay.toString());
+            System.out.println("\n8. " + Jambon.toString());
+            System.out.println("\n9. " + Nem.toString());
+            System.out.println("\n10. " + Thit.toString());
+            System.out.println("\n11. " + ThitNuong.toString());
+            System.out.println("\n12. " + TrungChien.toString());
+            System.out.println("\n13. " + XiuMai.toString());*/
+            System.out.println("\n14. Xóa topping gần nhất.") ;
+            System.out.println("\n15. Kết thúc nhập.") ;
+                System.out.print("\n ===============\n Lựa chọn: ");
+            option = sc.nextInt();
+        }
         return banhMi;
     }
     @Override
